@@ -1,14 +1,14 @@
-// Select DOM elements
-const timer = document.getElementById("timer"); // The timer display
-const focus = document.getElementById("focus"); // Start button
-const pause = document.getElementById("pause"); // Pause button
-const again = document.getElementById("again"); // Reset button
 
-// Timer variables
-let timeLeft = 1500; // 25 minutes in seconds
-let interval; // Stores the timer interval
+const timer = document.getElementById("timer");
+const focus = document.getElementById("focus"); 
+const pause = document.getElementById("pause"); 
+const again = document.getElementById("again"); 
 
-// Function to update the timer display
+
+let timeLeft = 1500; 
+let interval; 
+
+
 const updateTimer = () => {
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
@@ -18,36 +18,30 @@ const updateTimer = () => {
   }`;
 };
 
-// Function to start the timer
 const startTimer = () => {
-  if (interval) return; // Prevent multiple intervals
+  if (interval) return; 
   interval = setInterval(() => {
     timeLeft--;
     updateTimer();
     if (timeLeft === 0) {
       clearInterval(interval);
       alert("Time is up! Good job! ❤️");
-      timeLeft = 1500; // Reset timer
+      timeLeft = 1500;
       updateTimer();
     }
   }, 1000);
 };
-
-// Function to stop the timer
 const stopTimer = () => {
   clearInterval(interval);
-  interval = null; // Clear interval state
+  interval = null; 
 };
-
-// Function to reset the timer
 const resetTimer = () => {
   clearInterval(interval);
-  interval = null; // Clear interval state
-  timeLeft = 1500; // Reset to 25 minutes
+  interval = null;
+  timeLeft = 1500; 
   updateTimer();
 };
 
-// Event listeners for buttons
 focus.addEventListener("click", startTimer);
 pause.addEventListener("click", stopTimer);
 again.addEventListener("click", resetTimer);
