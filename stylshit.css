@@ -1,0 +1,60 @@
+ body{
+   
+    background-image: url(a.jpg);
+    background-size: 70% ;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+
+}
+#title{
+    font-size: xx-large;
+    text-align: center;
+    align-items: center;
+    margin-top: 10%;
+    color:#ca7f68 ;
+    font-family:Patrick Hand ;
+}
+#timer{
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 0%;
+    color:#d18f7b ;
+    font-family:  Arial, Helvetica, sans-serif;
+    
+}
+#focus{
+    position: fixed;
+    bottom:736px 552px; 
+    right: 650px; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:#66545e ;
+}
+#pause{
+
+    position:fixed;
+    right: 650px; 
+    margin-top: 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #a39193;
+
+}
+#again{
+    
+    position:fixed;
+    right: 650px; 
+    margin-top: 60px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:#aa6f73 ;
+
+}
